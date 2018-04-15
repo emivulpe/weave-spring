@@ -22,7 +22,7 @@ public class HttpRequestTest {
 
     @Test
     public void shouldReturnHomeWhenAccessingHomePage() throws Exception {
-        this.mockMvc.perform(get("/home")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("Home")));
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+                .andExpect(content().string(containsString("Examples")));
     }
 }
